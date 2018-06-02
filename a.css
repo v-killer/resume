@@ -1,0 +1,55 @@
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}body{
+    background: black;
+}
+a{
+   text-decoration: none;
+}
+
+.topNavBar{
+    padding: 20px 16px 20px 16px;
+}
+.topNavBar>nav>ul>li{
+    float: left;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+.topNavBar>a{
+    float: left;
+    font-family: "Segoe UI Black";
+    font-size: 22px;
+    padding-top: 1px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.topNavBar>nav>ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.topNavBar>nav>ul>li>a{
+    border-bottom: 3px solid transparent;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-weight: bold;
+}
+.topNavBar>nav>ul>li>a:hover{
+    border-bottom-color: #DC6465;
+}
+.topNavBar>nav{
+    font-size: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.topNavBar>a> .rs{
+    color: #e6686a;
+    margin-right: 4px;
+    font-size: 22px;
+}
+.topNavBar>a> .card{
+    color: #9A9DA2;
+    font-size: 22px;
+}
