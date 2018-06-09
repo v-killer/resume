@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>申浩的个人简历</title>
-    <link rel="stylesheet" href="./a.css">
-    <script src="//at.alicdn.com/t/font_694973_pjfc658hzj9py14i.js"></script>
+    <link rel="stylesheet" href="a.css">
+    <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>
     <style type="text/css">
         .icon {
             width: 1em;
@@ -19,12 +22,12 @@
 <body>
     <div class="topNavBar">
         <div class="topNavBar-inner clearfix">
-            <a class="logo" href="#" alt="logo">
+            <a href="#" class="logo" alt="logo">
                 <span class="rs">RS</span>
                 <span class="card">card</span>
             </a>
-            <nav>
-                <ul class="clearfix" style="float: right">
+            <nav style="float: right;">
+                <ul class="clearfix">
                     <li>
                         <a href="#">关于</a>
                     </li>
@@ -54,30 +57,28 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="userCard">
+        <div class="usercard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="./img/avatar.jpg" alt="头像">
                 </div>
                 <div class="text">
-                    <div class="profile">
-                        <span class="welcome">Hello
-                            <span class="triangle"></span>
-                        </span>
-                        <h1>申浩</h1>
-                        <p>前端开发工程师</p>
-                        <hr>
-                        <dl>
-                            <dt>年龄</dt>
-                            <dd>23</dd>
-                            <dt>所在城市</dt>
-                            <dd>郑州</dd>
-                            <dt>邮箱</dt>
-                            <dd>343206898@qq.com</dd>
-                            <dt>手机</dt>
-                            <dd>18625955003</dd>
-                        </dl>
-                    </div>
+                    <span class="welcome">HELLO
+                        <span class="triangle"></span>
+                    </span>
+                    <h1>申浩</h1>
+                    <p>前端工程师</p>
+                    <hr>
+                    <dl class="clearfix">
+                        <dt>年龄</dt>
+                        <dd>23</dd>
+                        <dt>工作地点</dt>
+                        <dd>郑州</dd>
+                        <dt>邮箱</dt>
+                        <dd>343206898@qq.com</dd>
+                        <dt>联系方式</dt>
+                        <dd>18625955003</dd>
+                    </dl>
                 </div>
             </div>
             <footer class="media">
@@ -86,61 +87,102 @@
                         <use xlink:href="#icon-qq"></use>
                     </svg>
                 </a>
-                <a href="#">
+                <a href="">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-github"></use>
                     </svg>
                 </a>
-                <a href="#">
+                <a href="">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-weibo"></use>
                     </svg>
                 </a>
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-xiangmulan-weixinhao"></use>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-juejin"></use>
-                    </svg>
             </footer>
         </div>
-
-        <a class="button" href="#">下载 PDF 简历</a>
-
-        <p>
-            申浩， 前端工程师
-            <br> 技能：前端开发，Rails 开发，Node.js 开发
+        <p class="downloadResume-wrapper">
+            <a class="downloadResume" href="#" target="_blank">下载PDF简历</a>
         </p>
-
+        <p class="selfIntroduction">
+            申浩，前端开发工程师。
+            <br>技能：前端开发，Node.js开发,HTML5&amp;CSS3
+        </p>
     </main>
-    <section>
+
+    <section class="skills">
         <h2>技能</h2>
-        <ol>
-            <li>HTML 5 &amp; CSS 3</li>
-            <li>JavaScript</li>
-            <li>jQuery</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>HTTP</li>
+        <ol class="clearfix">
+            <li>
+                <h3>HTML5&amp;CSS3</h3>
+                <div class="progressBar" >
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 20%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>JQuery</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 10%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Vue.js</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 10%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>React.js</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 10%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Node.js</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 30%"></div>
+                </div>
+            </li>
         </ol>
     </section>
-    <section>
+
+    <section class="portfolio">
         <h2>作品集</h2>
         <nav>
-            <ol>
-                <li>所有</li>
-                <li>框架</li>
-                <li>原生JS&amp;CSS</li>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生JS&amp;css</li>
             </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner"></div>
+            </div>
         </nav>
-
-        <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+        <script>
+            portfolio1.onclick= function(){
+                portfolioBar.className = "bar state-1"
+            }
+            portfolio2.onclick= function(){
+                portfolioBar.className = "bar state-2"
+            }
+            portfolio3.onclick= function(){
+                portfolioBar.className = "bar state-3"
+            }
+        </script>
+        <div class="works" style="height: 597px;">
+            <div class="big" style="top: 0;left: 0;"><!--0也要写，不然会出BUG-->
+                <img src="./img/1.jpg" alt="作品1">
+            </div>
+            <div class="small" style="top: 0;left: 645px;">
+                <img src="./img/2.jpg" alt="作品2">
+            </div>
+            <div class="small" style="top: 312px;left: 645px;">
+                <img src="./img/3.jpg" alt="作品3">
+            </div>
         </div>
 
     </section>

@@ -1,90 +1,99 @@
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-body {
-  background: #efefef;
-  margin: 0;
-}
-a {
-  text-decoration: none;
-}
 * {
   margin: 0;
   padding: 0;
+}
+body {
+  background: #efefef;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 hr {
   height: 0;
   border: none;
-  border-top: 1px solid rgb(222, 222, 222);
+  border-top: 1px solid #dedede;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*以上为基础设置*/
+
 .topNavBar {
-  padding: 20px 0;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-.topNavBar-inner {
-  padding: 0 16px;
+
+.topNavBar .topNavBar-inner {
+  padding: 28px 0;
 }
-.topNavBar a {
+
+.topNavBar .topNavBar-inner > a {
   float: left;
-  font-family: "Segoe UI Black";
-  font-size: 22px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-decoration: none;
+}
+
+.topNavBar .logo {
+  font-size: 24px;
   font-weight: bold;
+  font-family: Arial Black;
 }
 
-.topNavBar a > .rs {
-  color: #e6686a;
-  margin-right: 4px;
-  font-size: 22px;
+.topNavBar .logo .rs {
+  color: rgb(230, 104, 106);
+  margin-right: 13px;
+  margin-left: 11px;
 }
 
-.topNavBar a > .card {
-  color: #9a9da2;
-  font-size: 22px;
+.topNavBar .logo .card {
+  color: rgb(154, 157, 162);
 }
 
 .topNavBar nav {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  float: right;
+  padding-right: 16px;
 }
 
-.topNavBar nav > ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.topNavBar nav > ul > li {
+.topNavBar nav ul > li {
   float: left;
-  margin-left: 17px;
-  margin-right: 17px;
+  margin: 0 17px;
 }
 
-.topNavBar nav > ul > li > a {
-  font-size: 13px;
-  border-bottom: 3px solid transparent;
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
+.topNavBar nav ul > li > a {
+  font-size: 12px;
+  color: #b7b7b7;
   font-weight: bold;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  display: block;
+  padding-bottom: 5px;
 }
 
-.topNavBar nav > ul > li > a:hover {
-  border-bottom-color: #dc6465;
+.topNavBar nav ul > li > a:hover {
+  border-bottom: 3px solid rgb(224, 101, 103);
 }
 
 .banner {
-  height: 515px;
   background-image: url(./img/rs-cover.jpg);
+  height: 515px;
   background-position: center center;
   background-size: cover;
 }
@@ -92,80 +101,238 @@ hr {
   height: 515px;
   background-color: rgba(0, 0, 0, 0.8);
 }
-.userCard {
-  border: 1px solid red;
+
+.usercard {
   max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #ffffff;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.44);
 }
-.userCard .welcome {
-  display: inline-block;
-  background-color: rgb(232, 103, 107);
+
+.usercard .pictureAndText {
+  padding: 50px;
+}
+.usercard .picture {
+  float: left;
+  width: 299px;
+  height: 347px;
+}
+
+.usercard .text {
+  float: left;
+  margin-left: 65px;
+  width: 472px;
+}
+.usercard .welcome {
+  background-color: rgb(230, 104, 106);
   color: white;
-  padding: 4px 15px;
+  padding: 4px 16px;
+  display: inline-block;
   line-height: 22px;
   position: relative;
   margin-bottom: 10px;
+  font-weight: bold;
 }
-.userCard .welcome .triangle {
+
+.usercard .welcome .triangle {
   display: block;
   border: 10px solid transparent;
   width: 0px;
-  border-left-color: rgb(232, 103, 107);
+  border-left-color: #e6686a;
   border-top-width: 0px;
   position: absolute;
   left: 4px;
   top: 100%;
 }
-.userCard .picture {
-  float: left;
-  padding-right: 65px;
+
+.usercard .text h1 {
+  margin-top: 18px;
 }
-.userCard .text {
-  float: left;
-  width: 472px;
-}
-.userCard .pictureAndText {
-  padding: 58px 52px;
-}
-.userCard .text h1 {
-  margin-top: 20px;
-}
-.userCard .text hr {
+
+.usercard .text hr {
   margin: 20px 0;
 }
-.userCard dl dt,
-.userCard dl dd {
+
+.usercard dl dt,
+.usercard dl dd {
   float: left;
   padding: 5px 0;
 }
-.userCard dl dt {
+
+.usercard dl dt {
   width: 30%;
   font-weight: bold;
 }
-.userCard dl dd {
+
+.usercard dl dd {
   width: 70%;
   color: #9da0a7;
 }
-.userCard > footer.media {
-  background: rgb(232, 103, 107);
+
+.usercard footer.media {
+  background-color: rgb(230, 104, 106);
   text-align: center;
 }
-.userCard > footer.media > a {
+
+.usercard footer.media > a {
   display: inline-block;
   width: 40px;
   line-height: 30px;
-  padding: 5px 0;
   border-radius: 50%;
-  margin: 22px 16px;
+  padding: 5px 0;
+  margin: 16px;
 }
-.userCard > footer.media > a:hover {
-  background: rgb(208, 92, 96);
+
+.usercard footer.media > a:hover {
+  background-color: #cf5d5f;
 }
-.userCard svg {
+
+.usercard svg {
   width: 30px;
   height: 30px;
   fill: white;
   vertical-align: top;
+}
+
+body > main {
+  margin-top: -340px;
+}
+
+main .downloadResume-wrapper {
+  text-align: center;
+}
+
+main .downloadResume {
+  display: inline-block;
+  border: 1px solid #cdcfd1;
+  font-size: 14px;
+  padding: 21px 55px;
+  text-height: 16px;
+  background-color: #efefef;
+  border-radius: 2px;
+  color: #3d4451;
+  font-weight: bold;
+  margin: 32px 0;
+  transition: box-shadow 0.2s; /*控制阴影浮现时间*/
+}
+
+main .downloadResume:hover {
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
+}
+
+.selfIntroduction {
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 楷体;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+section.skills,
+section.portfolio {
+  max-width: 940px;
+  margin: 60px auto 100px auto;
+  text-align: center;/*使nav居中*/
+}
+
+section.skills h2,
+section.portfolio h2 {
+  text-align: center;
+  color: #3d4451;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+section.skills h3{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+section.skills ol {
+  background: white;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  padding: 42px 50px 10px;
+  margin: 30px;
+}
+section.skills ol>li{
+    float: left;
+    width: 48%;
+    box-sizing: border-box;/*宽度包括border和padding*/
+}
+
+section.skills ol>li:nth-child(even)/*选择偶数个li标签*/{
+    float: right;
+}
+section.skills .progressBar {
+  height: 5px;
+  border-radius: 2px;
+  background: #FAE1E1;
+  margin: 4px 0 40px 0;
+}
+section.skills .progressBar > .progress {
+  height: 100%;
+  background: #e6686a;
+  width: 70%;
+  border-radius: 2px;
+}
+
+
+section.portfolio nav{
+    text-align: center;/*使ol水平居中*/
+    display: inline-block;/*使nav变成内联元素,宽度内缩*/
+    vertical-align: top;
+    margin-top: 32px;
+}
+section.portfolio nav ol{
+    display: inline-block;
+    vertical-align: top;/*加了inline-block必须加va:t否则会出BUG*/
+}
+
+section.portfolio nav ol>li{
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;/*鼠标放在li元素上是变为手的形状*/
+}
+
+section.portfolio > nav > ol > li:first-child/*选择第一个li,等同于nth-child(1)*/{
+    margin-left: 0;
+  }
+
+section.portfolio nav .bar{
+    height: 5px;
+    background: white;
+    border-radius: 2px;
+    margin: 5px 0 28px 0;
+}
+
+section.portfolio nav .bar .bar-inner{
+    height: 100%;
+    background: #E6686A;
+    border-radius: 2px;
+    width: 10%;
+    transition: all 0.3s;/*过渡效果*/
+}
+
+section.portfolio>nav .bar.state-1 .bar-inner{
+    margin-left: 0;
+    width: 50px;
+}
+section.portfolio>nav .bar.state-2 .bar-inner{
+    margin-left: 65px;
+    width: 50px;
+}
+section.portfolio>nav .bar.state-3 .bar-inner{
+    margin-left: 140px;
+    width: 90px;
+}
+
+section.portfolio .works{
+    position: relative;
+}
+
+section.portfolio .works .big,
+section.portfolio .works .small{
+    position: absolute;
 }
