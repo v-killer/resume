@@ -286,10 +286,14 @@ main .downloadResume:hover {
   font-size: 18px;
 }
 
-section.skills,
+section.skills{
+  max-width: 940px;
+  margin: 100px auto 0 auto;
+  text-align: center;
+}
 section.portfolio {
   max-width: 940px;
-  margin: 60px auto 100px auto;
+  margin: 100px auto 100px auto;
   text-align: center;/*使nav居中*/
 }
 
