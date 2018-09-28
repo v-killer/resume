@@ -6,18 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>申浩的个人简历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="loading.css">
-    <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>
-    <style type="text/css">
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-    </style>
+    <!--引用阿里巴巴图标-->
+    <!-- <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script> -->
 </head>
 
 <body>
@@ -71,7 +64,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div id="siteAbout" class="usercard">
+        <div data-x id="siteAbout" class="usercard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="./img/avatar.jpg" alt="头像">
@@ -122,7 +115,7 @@
         </p>
     </main>
 
-    <section id="siteSkills" class="skills">
+    <section data-x id="siteSkills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -164,89 +157,50 @@
         </ol>
     </section>
 
-    <section id="siteWorks" class="portfolio">
+    <section data-x id="siteWorks" class="portfolio">
         <h2>作品集</h2>
-        <nav>
-            <ol class="clearfix">
-                <li id="portfolio1">所有</li>
-                <li id="portfolio2">框架</li>
-                <li id="portfolio3">原生JS&amp;css</li>
-            </ol>
-            <div id="portfolioBar" class="bar state-1">
-                <div class="bar-inner"></div>
+        <div id="mySlides">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <img src="./img/works/nav-page.jpg" class="swiper-slide">
+                    <img src="./img/works/canvas.jpg" class="swiper-slide">
+                    <img src="./img/works/apple-like.jpg" class="swiper-slide">
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                <!-- 如果需要滚动条 -->
+                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
-        </nav>
-        <script>
-            portfolio1.onclick = function () {
-                portfolioBar.className = "bar state-1"
-            }
-            portfolio2.onclick = function () {
-                portfolioBar.className = "bar state-2"
-            }
-            portfolio3.onclick = function () {
-                portfolioBar.className = "bar state-3"
-            }
-        </script>
-        <div class="works" style="height: 597px;">
-            <div class="big" style="top: 0;left: 0;">
-                <!-- 0也要写，不然会出BUG-->
-                <img src="./img/1.jpg" alt="作品1">
-            </div>
-            <div class="small" style="top: 0;left: 645px;">
-                <img src="./img/2.jpg" alt="作品2">
-            </div>
-            <div class="small" style="top: 312px;left: 645px;">
-                <img src="./img/3.jpg" alt="作品3">
-            </div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
+    <section class="message">
+        <h2>留言</h2>
+        <ol id="messageList">
+        </ol>
+        <form id="postMessageForm" style="width: 700px;margin: 50px auto;">
+            <label for="">姓名</label>
+            <input type="text" name="name">
+            <label for="">内容</label>
+            <input type="text" name="content">
+            <input type="submit" value="提交">
+        </form>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+    <!-- 模块化 -->
+    <script src="./js/init-swiper.js"></script>
+    <script src="./js/auto-slide-up.js"></script>
+    <script src="./js/sticky-topbar.js"></script>
+    <script src="./js/smoothly-navigation.js"></script>
+    <script src="./js/message.js"></script>
     <script>
         setTimeout(function () {
             siteWelcome.classList.remove('active')
         }, 1000)
-        window.onscroll = function (xxxxx) {
-            if (window.scrollY > 0) {
-                topNavBar.classList.add('sticky')
-            } else {
-                topNavBar.classList.remove('sticky')
-            }
-        }
-        let liTags = document.querySelectorAll('nav.menu > ul > li')
-        for (let i = 0; i < liTags.length; i++) {
-            liTags[i].onmouseenter = function (x) {
-                x.currentTarget.classList.add('active')
-            }
-            liTags[i].onmouseleave = function (x) {
-                x.currentTarget.classList.remove('active')
-            }
-        }
-        let aTags = document.querySelectorAll('nav.menu > ul > li > a')
-        function animate(time) {
-            requestAnimationFrame(animate);
-            TWEEN.update(time);
-        }
-        requestAnimationFrame(animate);
-        for (let i = 0; i < aTags.length; i++) {
-            aTags[i].onclick = function (x) {
-                x.preventDefault()
-                let a = x.currentTarget
-                let href = a.getAttribute('href')
-                let element = document.querySelector(href)
-                let top = element.offsetTop
-
-                let currentTop = window.scrollY
-                let targetTop = top - 93
-                var coords = { y: currentTop };
-                var tween = new TWEEN.Tween(coords)
-                    .to({ y: targetTop }, 500)
-                    .easing(TWEEN.Easing.Quadratic.InOut)
-                    .onUpdate(function () {
-                        window.scrollTo(0, coords.y)
-                    })
-                    .start();
-            }
-        }
     </script>
 </body>
 
