@@ -1,5 +1,5 @@
 !function () {
-    var view = document.querySelector('#mySlides')
+    var view = View('#mySlides') // == window.View('#mySlides') window可省略不写
     var controller = {
         view: null,
         swiper: null,
