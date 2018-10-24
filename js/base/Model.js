@@ -1,20 +1,28 @@
-// var model = Model({resourceName: 'Message'})  使用方法
-
-window.Model = function (options) {
+/*
+* var model = Model({
+*   resourceName:'表名'
+* })
+* */
+window.Model = function(options){
     let resourceName = options.resourceName
     return {
-        init: function () {
-            var APP_ID = 'G1GlTnvldWNsQNVhDzykL9iQ-gzGzoHsz';
-            var APP_KEY = '6BmhGV0R24I1AKmqy8keIcdz';
-            AV.init({ appId: APP_ID, appKey: APP_KEY });
+        init:function(){
+            var APP_ID = '0ThF52S9FmPkVAqsCJJ3FPgM-gzGzoHsz';
+            var APP_KEY = '7dUlHfVVAV3St4CsMT3Bwkq0';
+            AV.init({appId: APP_ID, appKey: APP_KEY});
         },
-        fetch: function () {
+        fetch:function(){
             var query = new AV.Query(resourceName);
-            return query.find() // Promise对象
+            var now = new Date()
+            query.lessThanOrEqualTo('createdAt', now);//查询今天之前创建的 Todo
+
+            query.limit(10);// 最多返回 10 条结果
+            query.descending('createdAt');
+            return query.find()  // Promise 对象
         },
-        save: function (object) {
-            var X = AV.Object.extend(resourceName);
-            var x = new X();
+        save:function(object){
+            var x = AV.Object.extend(resourceName)
+            var x = new x()
             return x.save(object)
         }
     }

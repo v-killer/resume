@@ -1,0 +1,66 @@
+/*打印时隐藏的*/
+/*userCard、下载按钮、项目图片*/
+.notPrint {
+    display:none;
+}
+body > main {
+    margin: 50px 0 20px 0;
+    padding:0;
+
+}
+section.myPortfolio {
+    padding:0;
+    margin:0 0 0px 0;
+}
+
+section.skills,
+section.portfolio,
+section.experience {
+    margin:0;
+    padding:0;
+}
+section.skills {
+    padding-top: 20px;
+}
+section.skills > h2,
+section.portfolio > h2,
+section.experience > h2,
+section.myPortfolio .section_header_title {
+    text-align: left;
+}
+section.myPortfolio .project {
+    padding:5px 0 0 0;
+}
+/*section.myPortfolio .project_intro_links {*/
+    /*margin-top: 5px;*/
+    /*text-align: center;*/
+/*}*/
+section.skills .tech-stack > ul {
+    border-left: none;
+    margin-left: 0;
+}
+section.skills {
+    box-shadow: none;
+}
+/*字体排版设置*/
+section.skills .tech-stack > ul > li li {
+    font-size: 14px;
+}
+/*section.skills .tech-stack h4 {*/
+    /*line-height: 1.1;*/
+/*}*/
+/*打印时显示的*/
+.personal-info-print {
+    display: block;
+    position:relative;
+}
+/*.project_thumb {*/
+    /*width: 320px;*/
+    /*margin-right: -370px;*/
+/*}*/
+.online-resume {
+    position:absolute;
+    top: 0;
+    right: 0;
+
+}

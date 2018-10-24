@@ -1,207 +1,417 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>申浩的个人简历</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="loading.css">
-    <!--引用阿里巴巴图标-->
-    <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>
+    <title>申浩的个人简历 | Web前端开发工程师 | Front-end Web Developer</title>
+    <!--<link rel="stylesheet" href="loading.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/print.css" media="print">
 </head>
 
 <body>
-    <div id="siteWelcome" class="site-welcome active">
-        <div class="loading"></div>
-    </div>
-    <div id="topNavBar" class="topNavBar">
+    <!--<div id="siteWelcome" class="site-welcome active">-->
+    <!--<div class="loading"></div>-->
+    <!--</div>-->
+    <div id="topNavBar" class="topNavBar notPrint ">
         <div class="topNavBar-inner clearfix">
-            <a href="#" class="logo" alt="logo">
-                <span class="rs">Shen</span>
-                <span class="card">Hao</span>
+            <a class="logo" href="#" alt="logo" style="float:left;">
+                <span class="rs">Shen</span><span class="card">Hao</span>
             </a>
-            <nav class="menu" style="float: right;">
+            <nav class="menu">
                 <ul class="clearfix">
-                    <li>
-                        <a href="#siteAbout">关于</a>
-                    </li>
+                    <li><a href="#siteAbout">关于</a></li>
+                    <li><a href="#siteWorks">作品</a></li>
                     <li>
                         <a href="#siteSkills">技能</a>
                     </li>
                     <li>
-                        <a href="#siteWorks">作品</a>
-                        <ul class="submenu">
-                            <li>作品1</li>
-                            <li>作品2</li>
-                            <li>作品3</li>
-                        </ul>
+                        <a href="https://v-killer.github.io/archives/" target="_blank">博客</a>
                     </li>
                     <li>
-                        <a href="#">博客</a>
-                        <ul class="submenu">
-                            <li>博客1</li>
-                            <li>博客2</li>
-                            <li>博客3</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">日历</a>
-                    </li>
-                    <li>
-                        <a href="#">联系方式</a>
-                    </li>
-                    <li>
-                        <a href="#">其他</a>
+                        <a href="https://github.com/v-killer" target="_blank">GitHub</a>
                     </li>
                 </ul>
             </nav>
         </div>
+
     </div>
-    <div class="banner">
-        <div class="mask"></div>
+    <div class="banner notPrint">
+        <div class="mask "></div>
     </div>
     <main>
-        <div data-x id="siteAbout" class="usercard">
+        <div data-x id="siteAbout" class="userCard notPrint">
             <div class="pictureAndText clearfix">
                 <div class="picture">
-                    <img src="./img/avatar.jpg" alt="头像">
+                    <img src="./img/resume.jpg" width=272 height=400 alt="头像">
                 </div>
                 <div class="text">
-                    <span class="welcome">HELLO
+                    <span class="welcome">你好，我是一名前端工程师
                         <span class="triangle"></span>
                     </span>
-                    <h1>申浩</h1>
-                    <p>前端工程师</p>
+                    <div>
+                        <h1>申浩</h1>
+                        <p>
+                            男，23岁
+                        </p>
+                    </div>
                     <hr>
-                    <dl class="clearfix">
-                        <dt>年龄</dt>
-                        <dd>23</dd>
-                        <dt>工作地点</dt>
+                    <dl>
+                        <dt>所在城市</dt>
                         <dd>郑州</dd>
-                        <dt>邮箱</dt>
-                        <dd>343206898@qq.com</dd>
-                        <dt>联系方式</dt>
+                        <dt>手机号码</dt>
                         <dd>18625955003</dd>
+                        <dt>微信号码</dt>
+                        <dd>shenhhhhh</dd>
+                        <dt>QQ 邮箱</dt>
+                        <dd>343206898@qq.com</dd>
                     </dl>
                 </div>
             </div>
             <footer class="media">
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-qq"></use>
-                    </svg>
-                </a>
-                <a href="https://github.com/v-killer">
+                <a href="https://github.com/v-killer" target="_blank" title="github">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-github"></use>
                     </svg>
                 </a>
-                <a href="">
+                <a href="https://juejin.im/user/5b053ef0518825426c693444/posts" target="_blank" title="掘金">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weibo"></use>
+                        <use xlink:href="#icon-juejin"></use>
+                    </svg>
+                </a>
+                <a href="https://www.zhihu.com/people/shen-57-80/activities" target="_blank" title="知乎">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
                     </svg>
                 </a>
             </footer>
-        </div>
-        <p class="downloadResume-wrapper">
-            <a class="downloadResume" href="#" target="_blank">下载PDF简历</a>
-        </p>
-    </main>
 
+        </div>
+        <div class="personal-info-print">
+            <h1 class="name">申浩</h1>
+            <p class="description">男，1995/08，大专(2014-2017)，河南财经政法大学，前端工程师。</p>
+            <ul class="contact">
+                <li>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-dianhua"></use>
+                    </svg>
+                    18625955003
+                </li>
+                <li>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-QQ"></use>
+                    </svg>
+                    343206898
+                </li>
+                <li>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                    shenhhhhh
+                </li>
+                <li>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-mail"></use>
+                    </svg>
+                    343206898@qq.com
+                </li>
+                <li>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-biji"></use>
+                    </svg>
+                    https://v-killer.github.io/
+                </li>
+                <li>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-2em"></use>
+                    </svg>
+                    https://github.com/v-killer
+                </li>
+            </ul>
+            <p class="online-resume">在线简历地址：https://v-killer.github.io/resume/index.html</p>
+        </div>
+        <!--<p class="selfIntroduction">-->
+        <!--</p>-->
+    </main>
+    <section class="myPortfolio" data-x id="siteWorks">
+        <div class="boundary">
+            <header class="section_header">
+                <h2 class="section_header_title">项目经历</h2>
+            </header>
+            <div class="section_body">
+                <section class="project">
+                    <div class="project_intro">
+                        <header class="project_intro_header clearfix">
+                            <h4 class="project_intro_header_title">网易云播放器<span> - a Netease cloud player</span></h4>
+                            <ul class="tech-tag-list">
+                                <li class="tech-tag-list_item tech-tag-list_item-jQuery">jQuery</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-html">HTML 5</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-css">CSS 3</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-javascript">JavaScript</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-lean-cloud">LeanCloud</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-qiniu">QiNiu</li>
+                            </ul>
+                        </header>
+                        <div class="project_intro_header_content">
+                            <p>
+                                基于jQuery技术栈，以LeanCloud和QiNiu为数据库，完成一个移动端网易云播放器，实现以下功能：
+                            </p>
+                            <ul class="list">
+                                <li>展示歌曲列表、展示热歌榜歌曲。</li>
+                                <li>歌曲播放、暂停、歌词展示。</li>
+                                <li>搭建后台管理系统，实现歌曲新建、添加、编辑。</li>
+                            </ul>
+                            <p class="project_intro_links">
+                                <a href="https://v-killer.github.io/163-music/src/index.html" target="_blank">预览地址</a>
+                                <a href="https://github.com/v-killer/163-music" target="_blank">源码地址</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_thumb">
+                        <img src="./img/works/163-music.jpg" alt="导航栏">
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="project_intro">
+                        <header class="project_intro_header clearfix">
+                            <h4 class="project_intro_header_title">快捷导航<span> -a Quick Navigation Page</span></h4>
+                            <ul class="tech-tag-list">
+                                <li class="tech-tag-list_item tech-tag-list_item-html">HTML 5</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-css">CSS 3</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-javascript">JavaScript</li>
+                            </ul>
+                        </header>
+                        <div class="project_intro_header_content">
+                            <p>
+                                基于原生 JavaScript 结合 localStorage 在线存储功能，动态生成一个优美快捷的个人导航页。实现以下功能：
+                            </p>
+                            <ul class="list">
+                                <li>键盘快捷导航功能,敲击键盘字母跳转到绑定导航网址。</li>
+                                <li>导航键编辑导航地址功能。</li>
+
+                            </ul>
+                            <p class="project_intro_links">
+                                <a href="https://v-killer.github.io/nav-demo/index" target="_blank">预览地址</a>
+                                <a href="https://github.com/v-killer/nav-demo" target="_blank">源码地址</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_thumb">
+                        <img src="./img/works/nav-page.jpg" alt="导航栏">
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="project_intro">
+                        <header class="project_intro_header clearfix">
+                            <h4 class="project_intro_header_title">皮卡丘<span> - code a Minion for you</span></h4>
+                            <ul class="tech-tag-list">
+                                <li class="tech-tag-list_item tech-tag-list_item-html">HTML 5</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-javascript">JavaScript</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-css">CSS 3</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-jQuery">jQuery</li>
+
+                            </ul>
+                        </header>
+                        <div class="project_intro_header_content">
+                            <p>
+                                基于 jQuery，动态向 style 标签添加样式以及 pre 标签添加文本，模拟css绘制小黄人的过程，主要功能有：
+                            </p>
+                            <ul class="list">
+                                <li>同时显示style代码和绘画过程。</li>
+                                <li>增加播放代码速度调节按钮。</li>
+                                <li>适配手机端。</li>
+                            </ul>
+                            <p class="project_intro_links">
+                                <a href="https://v-killer.github.io/Pikachu-demo/index.html" target="_blank">预览地址</a>
+                                <a href="https://github.com/v-killer/Pikachu-demo" target="_blank">源码地址</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_thumb">
+                        <img src="./img/works/Minion.jpg" alt="苹果风格轮播">
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="project_intro">
+                        <header class="project_intro_header clearfix">
+                            <h4 class="project_intro_header_title">会动的简历<span> - make your resume active</span></h4>
+                            <ul class="tech-tag-list">
+                                <li class="tech-tag-list_item tech-tag-list_item-html">HTML 5</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-css">CSS 3</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-javascript">JavaScript</li>
+                            </ul>
+                        </header>
+                        <div class="project_intro_header_content">
+                            <p>
+                                基于原生 JavaScript 和 CCS 3，动态向 style 标签添加样式以及 pre 标签添加文本，利用 prism.js 实现代码高亮,使简历生动起来。
+                            </p>
+                            <p class="project_intro_links">
+                                <a href="https://v-killer.github.io/moving-resume/index.html" target="_blank">预览地址</a>
+                                <a href="https://github.com/v-killer/moving-resume" target="_blank">源码地址</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_thumb">
+                        <img src="./img/works/animation-resume.jpg" alt="导航栏">
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="project_intro">
+                        <header class="project_intro_header clearfix">
+                            <h4 class="project_intro_header_title">smart 在线画板<span> - Draw anything your want</span></h4>
+                            <ul class="tech-tag-list">
+                                <li class="tech-tag-list_item tech-tag-list_item-html">HTML 5</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-css">CSS 3</li>
+                                <li class="tech-tag-list_item tech-tag-list_item-javascript">JavaScript</li>
+                            </ul>
+                        </header>
+                        <div class="project_intro_header_content">
+                            <p>
+                                基于原生 JavaScript 与 canvas 实现的在线画板，主要功能有：
+                            </p>
+                            <ul class="list">
+                                <li>实现任意选择颜色、画笔类型以及擦除等绘画功能。</li>
+                                <li>实现在线画板的本地保存功能。</li>
+                                <li>支持手机在线绘画功能。</li>
+                            </ul>
+                            <p class="project_intro_links">
+                                <a href="https://v-killer.github.io/canvas-demo/index.html" target="_blank">预览地址</a>
+                                <a href="https://github.com/v-killer/canvas-demo" target="_blank">源码地址</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_thumb">
+                        <img src="./img/works/canvas.jpg" alt="canvas画板">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
     <section data-x id="siteSkills" class="skills">
         <h2>技能</h2>
-        <ol class="clearfix">
-            <li>
-                <h3>HTML5&amp;CSS3</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 70%;"></div>
-                </div>
-            </li>
-            <li>
-                <h3>JavaScript</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 20%;"></div>
-                </div>
-            </li>
-            <li>
-                <h3>JQuery</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 10%;"></div>
-                </div>
-            </li>
-            <li>
-                <h3>Vue.js</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 10%;"></div>
-                </div>
-            </li>
-            <li>
-                <h3>React.js</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 10%"></div>
-                </div>
-            </li>
-            <li>
-                <h3>Node.js</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 30%"></div>
-                </div>
-            </li>
-        </ol>
+        <section class="tech-stack">
+            <ul>
+                <li>
+                    <div class="circle"></div>
+                    <h4>HTML5 & CSS3</h4>
+                    <ul>
+                        <li>标签语义化：能根据 HTML5 标准编写具有语义化的文档结构。</li>
+                        <li>CSS居中与布局：能快速对元素进行居中处理，使用float、flex、grid等方案进行页面布局。</li>
+                        <li>CSS动画：能使用keyframes、transition、transform等实现常见动画效果。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <h4>移动端页面</h4>
+                    <ul>
+                        <li>PC 端能使用(meta name="viewport")以及媒体查询 (media query)进行响应式开发。</li>
+                        <li>移动端根据百分比、动态 REM、vw/vh 等书写响应式页面，100% 还原设计稿。 </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <h4>ECMAScript（JavaScript）</h4>
+                    <ul>
+                        <li>熟悉 ECMAScript，理解异步与单线程、作用域链与闭包、原型链与继承、面向对象等核心知识。</li>
+                        <li>学习了部分 ES6 语法,能使用 let 与块级作用域、解构赋值、数据类型的扩展、Set 和 Map 数据结构、Class 与继承、Promise 异步写法、模块化等语法。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <h4>DOM/BOM</h4>
+                    <ul>
+                        <li>熟悉 DOM 事件模型，理解捕获、冒泡以及如何阻止事件的传递。</li>
+                        <li>熟悉原生 DOM 和 BOM 使用和相关标准。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <h4>jQuery</h4>
+                    <ul>
+                        <li>熟悉 jQuery 的常用 API，能使用 jQuery 类库进行常规网站开发。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <h4>HTTP与浏览器</h4>
+                    <ul>
+                        <li>了解 HTTP 基础知识，了解常见状态码含义，能够根据请求查看响应。</li>
+                        <li>理解客户端缓存、同源策略，以及常用的跨域方法。</li>
+                        <li>了解浏览器运行机制和页面加载的整个过程。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <h4>命令行</h4>
+                    <ul>
+                        <li>了解命令行，能够使用命令行进行常用的操作。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <h4>Git</h4>
+                    <ul>
+                        <li>了解 git 版本控制工具以及常用的操作。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <h4>前端工程化</h4>
+                    <ul>
+                        <li>使用过 WebPack、Rollup、Parcel 等前端打包工具，能够进行基础的使用。</li>
+                        <li>了解基本的前端安全，性能优化等知识，并能在项目中加以实践。</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+
+    </section>
+    <section id="experience" class="experience">
+        <style>
+           
+        </style>
+        <h2>个人履历</h2>
+        <p>2017年毕业于【河南财经政法大学】，工商企业管理专业；2017年至2018年，期间任职于新乡金牌国际教育，担任微信公众号运营一职；因喜爱计算机的缘故，于2018年3月开始接触前端，目前自学前端一年，喜欢新技术新知识，自学能力较强。
+        </p>
     </section>
 
-    <section data-x id="siteWorks" class="portfolio">
-        <h2>作品集</h2>
-        <div id="mySlides">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <img src="./img/works/nav-page.jpg" class="swiper-slide">
-                    <img src="./img/works/canvas.jpg" class="swiper-slide">
-                    <img src="./img/works/apple-like.jpg" class="swiper-slide">
-                </div>
-                <!-- 如果需要分页器 -->
-                <div class="swiper-pagination"></div>
-                <!-- 如果需要滚动条 -->
-                <!-- <div class="swiper-scrollbar"></div> -->
-            </div>
-            <!-- 如果需要导航按钮 -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
+
     </section>
-    <section class="message">
-        <h2>留言</h2>
-        <ol id="messageList">
-        </ol>
-        <form id="postMessageForm" style="width: 700px;margin: 50px auto;">
-            <label for="">姓名</label>
-            <input type="text" name="name">
-            <label for="">内容</label>
-            <input type="text" name="content">
-            <input type="submit" value="提交">
-        </form>
+    <section class="download notPrint">
+        <p class="downloadResume-wrapper">
+            <a class="downloadResume" href="./resume.pdf" download="应聘-前端工程师-申浩-2018.pdf">下载简历</a>
+        </p>
     </section>
+
+    <!--<section class="message">-->
+    <!--<h2>留言</h2>-->
+    <!--<ol id="messageList">-->
+    <!--</ol>-->
+    <!--<form id="postMessageForm" style="width:700px; margin:50px auto;">-->
+    <!--<label for="">姓名</label>-->
+    <!--<input type="text" name="name">-->
+    <!--<label for="">内容</label>-->
+    <!--<input type="text" name="content">-->
+    <!--<input type="submit" value="提交">-->
+    <!--</form>-->
+    <!--</section>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>-->
+    <script src="//cdn1.lncld.net/static/js/3.6.5/av-min.js"></script>
+    <script src="//at.alicdn.com/t/font_694973_9w2nbtvv57a.js"></script>
+
     <script src="./js/base/View.js"></script>
     <script src="./js/base/Model.js"></script>
     <script src="./js/base/Controller.js"></script>
     <!-- 模块化 -->
-    <script src="./js/init-swiper.js"></script>
-    <script src="./js/auto-slide-up.js"></script>
+    <!--<script src="./js/init-swiper.js"></script>-->
+    <!--<script src="./js/auto-slide-up.js"></script>-->
     <script src="./js/sticky-topbar.js"></script>
     <script src="./js/smoothly-navigation.js"></script>
-    <script src="./js/message.js"></script>
-    <script src="./js/base/Controller.js"></script>
-    <script>
-        setTimeout(function () {
-            siteWelcome.classList.remove('active')
-        }, 1000)
-    </script>
+    <!--<script src="./js/message.js"></script>-->
 </body>
 
 </html>
